@@ -19,7 +19,6 @@ function checkSlot() {
     .get(cowinURL)
     .then((res) => {
       let result = res.data.sessions;
-      console.log('ok');
       result.forEach((center) => {
         if (center.available_capacity_dose1 > 0) {
           count++;
