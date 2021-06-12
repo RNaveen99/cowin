@@ -25,15 +25,11 @@ function checkSlot() {
         }
       });
       if (count > 0) {
-        document.querySelector(
-          '#info'
-        ).innerHTML = `<h3>Count : ${count} </h3>`;
         sound.play();
-      } else {
-        document.querySelector(
-          '#info'
-        ).innerHTML = `<h3>Last fetched at ${new Date()}</h3>`;
       }
+      document.querySelector(
+        '#info'
+      ).innerHTML = `<h3>Count : ${count} </h3> <h3>Last fetched at ${new Date()}</h3>`;
     })
     .catch((err) => {
       //
