@@ -9,9 +9,6 @@ if ('serviceWorker' in navigator) {
 let calls = 0;
 function checkSlot() {
   const sound = new Audio('sound/ring.mp3');
-  if (calls % 2 == 0) {
-    sound.play();
-  }
   calls++;
   document.querySelector('#calls').innerHTML = `Total api calls = ${calls}`;
   let d = new Date();
