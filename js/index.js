@@ -6,14 +6,17 @@ if ('serviceWorker' in navigator) {
       .catch((err) => console.log('service worker not registered', err));
   });
 }
-
+let calls = 0;
 function checkSlot() {
   const sound = new Audio('sound/ring.mp3');
+  if (calls % 2 == 0) {
+    sound.play();
+  }
+  calls++;
   let d = new Date();
   let cowinURL = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=124507&date=${d.getDate()}-${
     d.getMonth() + 1
   }-2021`;
-  console.log(cowinURL);
   let count = 0;
   axios
     .get(cowinURL)
@@ -29,7 +32,7 @@ function checkSlot() {
       }
       document.querySelector(
         '#info'
-      ).innerHTML = `<h3>Count : ${count} </h3> <h3>Last fetched at ${new Date()}</h3>`;
+      ).innerHTML = `<h3>Centers : ${count} </h3> <h3>Last fetched at ${new Date()}</h3>`;
     })
     .catch((err) => {
       //
