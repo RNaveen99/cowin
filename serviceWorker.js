@@ -1,6 +1,6 @@
 const CowinAssests = 'Cowin';
 // const assets = ['index.html', './js/index.js'];
-const assets = ['index.html'];
+const assets = [];
 
 self.addEventListener('install', (installEvent) => {
   installEvent.waitUntil(
