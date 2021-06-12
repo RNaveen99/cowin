@@ -7,8 +7,8 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-const sound = new Audio('sound/beepSuccess.mp3');
 function checkSlot() {
+  const sound = new Audio('sound/ring.mp3');
   let d = new Date();
   let cowinURL = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=124507&date=${d.getDate()}-${
     d.getMonth() + 1
