@@ -26,13 +26,14 @@ function checkSlot() {
         }
       });
       if (count > 0) {
-        document.querySelector('body').innerHTML = `<h3>Count : ${count} </h3>`;
+        document.querySelector(
+          '#info'
+        ).innerHTML = `<h3>Count : ${count} </h3>`;
         sound.play();
       } else {
         document.querySelector(
-          'body'
+          '#info'
         ).innerHTML = `<h3>Last fetched at ${new Date()}</h3>`;
-        sound.play();
       }
     })
     .catch((err) => {
