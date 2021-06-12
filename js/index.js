@@ -20,7 +20,7 @@ function checkSlot() {
     .then((res) => {
       let result = res.data.sessions;
       result.forEach((center) => {
-        if (center.available_capacity_dose1 > 0) {
+        if (center.available_capacity_dose1 > 0 && center.min_age_limit == 18) {
           count++;
         }
       });
