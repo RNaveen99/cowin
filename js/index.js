@@ -13,6 +13,7 @@ function checkSlot() {
     sound.play();
   }
   calls++;
+  document.querySelector('#calls').innerHTML = `Total api calls = ${calls}`;
   let d = new Date();
   let cowinURL = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=124507&date=${d.getDate()}-${
     d.getMonth() + 1
