@@ -1,0 +1,26 @@
+{
+  "name": "cowin",
+  "version": "1.0.0",
+  "description": "COWIN Automatic slot Booking",
+  "main": "index2.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RNaveen99/cowin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RNaveen99/cowin/issues"
+  },
+  "homepage": "https://github.com/RNaveen99/cowin#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "puppeteer": "^10.0.0",
+    "qs": "^6.10.1",
+    "selenium-webdriver": "^4.0.0-beta.4",
+    "telegram-bot-api": "^2.0.1"
+  }
+}
